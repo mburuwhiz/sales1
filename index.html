@@ -15,7 +15,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4 py-12">
 
     <div class="max-w-2xl w-full glass-card rounded-3xl shadow-2xl overflow-hidden">
         <div class="bg-green-500 p-8 text-center text-white">
@@ -71,30 +71,52 @@
                 </button>
             </div>
 
+            <div class="bg-gray-50 rounded-2xl p-6 border border-gray-100 mb-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Auckland Showroom</h4>
+                        <p class="text-gray-700 font-medium leading-relaxed">
+                            6 Polaris Place, East Tamaki<br>
+                            Auckland, New Zealand
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2">Opening Hours</h4>
+                        <ul class="text-sm text-gray-600 space-y-1">
+                            <li><span class="font-semibold">Mon - Fri:</span> 9:00 AM – 3:30 PM</li>
+                            <li><span class="font-semibold">Saturday:</span> 9:00 AM – 1:00 PM</li>
+                            <li class="text-red-500 font-medium italic">Sunday: Closed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
             <div class="mt-4 pt-8 border-t border-gray-100">
-                <h3 class="text-center font-bold text-gray-800 mb-4 text-xl">Contact Support</h3>
-                <p class="text-center text-gray-500 mb-6">Email us at: <span class="text-blue-600 font-semibold">sales@whizpoint.app</span></p>
+                <h3 class="text-center font-bold text-gray-800 mb-4 text-xl">Need Assistance?</h3>
+                <p class="text-center text-gray-500 mb-6">Email our support team: <span class="text-blue-600 font-semibold underline">sales@whizpoint.app</span></p>
                 
-                <form onsubmit="alert('Message Sent Successfully!'); return false;" class="space-y-4">
-                    <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <textarea placeholder="Your Message" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none"></textarea>
-                    <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded-lg font-bold hover:bg-blue-700 transition uppercase tracking-widest">Send Message</button>
+                <form onsubmit="alert('Thank you! Your inquiry has been sent to our sales team.'); return false;" class="space-y-4">
+                    <input type="text" placeholder="Your Name" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+                    <textarea placeholder="How can we help with your order?" rows="3" required class="w-full px-4 py-3 rounded-lg border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition"></textarea>
+                    <button type="submit" class="w-full py-4 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 transition uppercase tracking-widest shadow-md">Send Message</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <div id="trackModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center p-4 z-50">
-        <div class="bg-white rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl animate-bounce-short">
-            <div class="text-orange-500 mb-4">
-                <svg class="w-16 h-16 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
+    <div id="trackModal" class="fixed inset-0 bg-black/60 hidden flex items-center justify-center p-4 z-50">
+        <div class="bg-white rounded-3xl p-8 max-w-sm w-full text-center shadow-2xl">
+            <div class="text-orange-500 mb-4 bg-orange-50 w-20 h-20 rounded-full flex items-center justify-center mx-auto">
+                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>
             </div>
             <h2 class="text-2xl font-bold text-gray-800 mb-2">Order Status</h2>
-            <p class="text-lg text-gray-600 font-medium bg-orange-50 py-2 rounded-full border border-orange-100">
-                READY FOR DISPATCH
+            <div class="py-3 px-4 bg-orange-100 text-orange-800 rounded-xl font-black text-xl tracking-tighter border-2 border-orange-200 uppercase">
+                Ready for Dispatch
+            </div>
+            <p class="text-sm text-gray-500 mt-6 leading-tight">
+                Our team at <strong>East Tamaki</strong> is preparing your shipment. You will receive a notification once it leaves the showroom.
             </p>
-            <p class="text-sm text-gray-400 mt-4 italic">Tracking will be updated once shipped.</p>
-            <button onclick="closeTrackPopup()" class="mt-6 text-blue-600 font-bold hover:underline">Close</button>
+            <button onclick="closeTrackPopup()" class="mt-8 w-full py-3 border-2 border-gray-100 rounded-xl text-gray-400 font-bold hover:bg-gray-50 transition">Close</button>
         </div>
     </div>
 
